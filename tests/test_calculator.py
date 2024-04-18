@@ -87,6 +87,37 @@ class Test_calculator(unittest.TestCase):
         c = Calculator()
         self.assertEqual(c.multiplicacao("ABC", 7), None)
 
+    def test_divisao_com_dois_positivos(self):
+        c = Calculator()
+        self.assertEqual(c.divisao(2, 8), 0.25)
+
+    def test_divisao_com_um_negativo(self):
+        c = Calculator()
+        self.assertEqual(c.divisao(6, -3), -2)
+
+    def test_divisao_com_dois_negativos(self):
+        c = Calculator()
+        self.assertEqual(c.divisao(-3, -4), 0.75)
+
+    def test_divisao_com_zero(self):
+        c = Calculator()
+        self.assertEqual(c.divisao(0, 10), 0)
+    
+    def test_divisao_com_zero_no_divisor(self):
+        c = Calculator()
+        self.assertEqual(c.divisao(10, 0), None)
+
+    def test_divisao_com_apenas_um_numero(self):
+        c = Calculator()
+        self.assertEqual(c.divisao(None, 10), None)
+
+    def test_divisao_com_decimais(self):
+        c = Calculator()
+        self.assertEqual(c.divisao(7.5, 2.5), 3)
+
+    def test_divisao_com_valores_nao_sendo_numero(self):
+        c = Calculator()
+        self.assertEqual(c.divisao("ABC", 7), None)
    
 
 if __name__ == '__main__':
