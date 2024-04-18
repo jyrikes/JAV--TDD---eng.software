@@ -21,11 +21,26 @@ class Calculator:
             resultado = a - b
             return resultado
     
-    def multiplicacao(self):
-        return
+    def multiplicacao(self, a, b):
+        if a is None or b is None:
+            return None
+        elif not (isinstance(a, (int, float)) and isinstance (b, (int, float))):
+            return None
+        else:
+            resultado = a * b
+            return resultado
     
-    def divisao(self):
-        return
+    def divisao(self, a, b):
+        if a is None or b is None:
+            return None
+        elif not (isinstance(a, (int, float)) and isinstance (b, (int, float))):
+            return None
+        elif b == 0:
+            return None
+        else:
+            resultado = a / b
+            return resultado
+        
     
     def potencia(self):
         return
