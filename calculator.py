@@ -4,12 +4,22 @@ class Calculator:
         pass
     
     def soma(self, a, b):
-        resultado = a + b
-        return resultado
+        if a is None or b is None:
+            return None
+        elif not (isinstance(a, (int, float)) and isinstance (b, (int, float))):
+            return None
+        else:
+            resultado = a + b
+            return resultado
     
     def subtracao(self, a, b):
-        resultado = a - b
-        return resultado
+        if a is None or b is None:
+            return None
+        elif not (isinstance(a, (int, float)) and isinstance (b, (int, float))):
+            return None
+        else:
+            resultado = a - b
+            return resultado
     
     def multiplicacao(self):
         return

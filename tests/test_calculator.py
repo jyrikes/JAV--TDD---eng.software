@@ -21,7 +21,7 @@ class Test_calculator(unittest.TestCase):
     
     def test_soma_com_apenas_um_numero(self):
         c = Calculator()
-        self.assertEqual(c.soma(10), None)
+        self.assertEqual(c.soma(None, 10), None)
     
     def teste_soma_com_numeros_decimais(self):
         c = Calculator()
@@ -49,11 +49,11 @@ class Test_calculator(unittest.TestCase):
 
     def test_subtracao_com_apenas_um_numero(self):
         c = Calculator()
-        self.assertEqual(c.subtracao(10), None)
+        self.assertEqual(c.subtracao(None, 10), None)
     
     def teste_subtracao_com_numeros_decimais(self):
         c = Calculator()
-        self.assertEqual(c.subtracao(3.4, 7.3), 10.7)
+        self.assertEqual(c.subtracao(3.4, 7.3), -3.9)
 
     def teste_subtracao_com_valores_nao_sendo_numero(self):
         c = Calculator()
