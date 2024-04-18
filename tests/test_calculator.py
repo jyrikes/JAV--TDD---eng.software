@@ -59,5 +59,35 @@ class Test_calculator(unittest.TestCase):
         c = Calculator()
         self.assertEqual(c.subtracao("abc", 7), None)
 
+    def test_multiplicacao_com_dois_positivos(self):
+        c = Calculator()
+        self.assertEqual(c.multiplicacao(2, 8), 16)
+
+    def test_multiplicacao_com_um_negativo(self):
+        c = Calculator()
+        self.assertEqual(c.multiplicacao(-3, 7), -21)
+
+    def test_multiplicacao_com_dois_negativos(self):
+        c = Calculator()
+        self.assertEqual(c.multiplicacao(-3, -4), 12)
+
+    def test_multiplicacao_com_zero(self):
+        c = Calculator()
+        self.assertEqual(c.multiplicacao(0, 10), 0)
+
+    def test_multiplicacao_com_apenas_um_numero(self):
+        c = Calculator()
+        self.assertEqual(c.multiplicacao(None, 10), None)
+
+    def test_multiplicacao_com_decimais(self):
+        c = Calculator()
+        self.assertEqual(c.multiplicacao(3.4, 7.3), 24.82)
+
+    def test_multiplicacao_com_valores_nao_sendo_numero(self):
+        c = Calculator()
+        self.assertEqual(c.multiplicacao("ABC", 7), None)
+
+   
+
 if __name__ == '__main__':
     unittest.main()
