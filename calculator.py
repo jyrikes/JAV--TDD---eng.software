@@ -3,24 +3,57 @@ class Calculator:
     def __init__(self) -> None:
         pass
     
-    def soma():
+    def soma(self, a, b):
+        if a is None or b is None:
+            return None
+        elif not (isinstance(a, (int, float)) and isinstance (b, (int, float))):
+            return None
+        else:
+            resultado = a + b
+            return resultado
+    
+    def subtracao(self, a, b):
+        if a is None or b is None:
+            return None
+        elif not (isinstance(a, (int, float)) and isinstance (b, (int, float))):
+            return None
+        else:
+            resultado = a - b
+            return resultado
+    
+    def multiplicacao(self, a, b):
+        if a is None or b is None:
+            return None
+        elif not (isinstance(a, (int, float)) and isinstance (b, (int, float))):
+            return None
+        else:
+            resultado = a * b
+            return resultado
+    
+    def divisao(self, a, b):
+        if a is None or b is None:
+            return None
+        elif not (isinstance(a, (int, float)) and isinstance (b, (int, float))):
+            return None
+        elif b == 0:
+            return None
+        else:
+            resultado = a / b
+            return resultado
+        
+    
+    def potencia(self):
         return
     
-    def subtracao():
+    def raiz_quadrada(self):
         return
     
-    def multiplicacao():
+    def fatorial(self):
         return
     
-    def divisao():
-        return
+    def resto_divisao(self):
+        return 
     
-    def potencia():
-        return
     
-    def raiz_quadrada():
-        return
     
-    def fatorial():
-        return
         
